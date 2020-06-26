@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
+  get 'election_trails/index'
   resources :elections do
+    resources :election_trails, only: [:index]
+    
     resources :questions, shallow: true do
       resources :answers, shallow: true
     end

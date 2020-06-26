@@ -23,6 +23,7 @@
         <td><%= link_to 'Show', election %></td>
         <td><%= link_to 'Edit', edit_election_path(election) %></td>
         <td><%= link_to 'Destroy', election, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Trail', election_election_trails_path(election) %></td>
       </tr>
     <% end %>
   </tbody>
