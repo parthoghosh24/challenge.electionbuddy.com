@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_26_145218) do
+ActiveRecord::Schema.define(version: 2020_06_26_153140) do
 
   create_table "answers", force: :cascade do |t|
     t.string "name"
@@ -40,7 +40,6 @@ ActiveRecord::Schema.define(version: 2020_06_26_145218) do
   end
 
   create_table "trails", force: :cascade do |t|
-    t.string "original_attributes"
     t.string "modified_attributes"
     t.string "type"
     t.string "action"
@@ -48,6 +47,7 @@ ActiveRecord::Schema.define(version: 2020_06_26_145218) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "election_id"
+    t.string "entity"
   end
 
   create_table "users", force: :cascade do |t|
