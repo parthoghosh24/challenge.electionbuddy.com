@@ -4,7 +4,7 @@ class ElectionsController < ApplicationController
 
   # GET /elections
   # GET /elections.json
-  def index
+  def index    
     @elections = current_user.elections
   end
 
